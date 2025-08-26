@@ -16,6 +16,7 @@ router.post('/register', register);
 router.post('/login', login);
 router.get('/verify-email', verifyEmail);
 
+
 // Protected routes
 router.get('/', authenticate, authorize('admin'), getAllUsers);
 router.get('/:id', authenticate, getUserById);
